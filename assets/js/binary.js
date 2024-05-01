@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.51/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.1","target":"arcade","targetVersion":"1.12.51","repo":"aiden-ji/control-twoplayer-twobutton"}
-// total=1330147 new=6.32% cached=87.85% other=5.82%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.51/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.12.51","repo":"aiden-ji/control-twoplayer-twobutton"}
+// total=1330626 new=6.36% cached=87.82% other=5.82%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -441,7 +441,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P156713(s) {
+function _main___P158180(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -865,22 +865,22 @@ switch (step) {
     s.tmp_0 = controller_Button_onEvent__P138323_mk(s);
     s.tmp_0.arg0 = globals.B___138241;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P156601;
+    s.tmp_0.arg2 = inline__P158063;
     s.callLocIdx = 72; s.pc = 41; return s.tmp_0;
   case 41:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P138323_mk(s);
     s.tmp_0.arg0 = globals.A___138240;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P156623;
+    s.tmp_0.arg2 = inline__P158085;
     s.callLocIdx = 75; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
-    globals.blue_speed___156606 = (0);
-    globals.blue___156610 = (null);
-    globals.yellow___156616 = (null);
-    globals.yellow_speed___156603 = (0);
-    globals.yellow_speed___156603 = (100);
+    globals.blue_speed___158068 = (0);
+    globals.blue___158072 = (null);
+    globals.yellow___158078 = (null);
+    globals.yellow_speed___158065 = (0);
+    globals.yellow_speed___158065 = (100);
     s.tmp_0 = sprites_create__P138402_mk(s);
     s.tmp_1 = helpers_getImageByName__P139463_mk(s);
     s.tmp_1.arg0 = "myImage";
@@ -892,9 +892,9 @@ switch (step) {
     s.callLocIdx = 77; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
-    globals.yellow___156616 = (r0);
+    globals.yellow___158078 = (r0);
     s.tmp_0 = Sprite_setPosition__P138536_mk(s);
-    s.tmp_0.arg0 = globals.yellow___156616;
+    s.tmp_0.arg0 = globals.yellow___158078;
     s.tmp_0.arg1 = 120;
     s.tmp_0.arg2 = 30;
     s.callLocIdx = 78; s.pc = 45; return s.tmp_0;
@@ -911,59 +911,74 @@ switch (step) {
     s.callLocIdx = 80; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
-    globals.blue___156610 = (r0);
+    globals.blue___158072 = (r0);
     s.tmp_0 = Sprite_setPosition__P138536_mk(s);
-    s.tmp_0.arg0 = globals.blue___156610;
+    s.tmp_0.arg0 = globals.blue___158072;
     s.tmp_0.arg1 = 120;
     s.tmp_0.arg2 = 80;
     s.callLocIdx = 81; s.pc = 48; return s.tmp_0;
   case 48:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P138294_mk(s);
-    s.tmp_0.arg0 = globals.yellow___156616;
-    s.tmp_0.arg1 = globals.yellow_speed___156603;
-    s.tmp_0.arg2 = globals.yellow_speed___156603;
+    s.tmp_0.arg0 = globals.yellow___158078;
+    s.tmp_0.arg1 = globals.yellow_speed___158065;
+    s.tmp_0.arg2 = globals.yellow_speed___158065;
     s.callLocIdx = 82; s.pc = 49; return s.tmp_0;
   case 49:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P138544_mk(s);
-    s.tmp_0.arg0 = globals.blue___156610;
+    s.tmp_0.arg0 = globals.blue___158072;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 83; s.pc = 50; return s.tmp_0;
   case 50:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P138544_mk(s);
-    s.tmp_0.arg0 = globals.yellow___156616;
+    s.tmp_0.arg0 = globals.yellow___158078;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 84; s.pc = 51; return s.tmp_0;
   case 51:
     r0 = s.retval;
     s.tmp_0 = textsprite_create__P140471_mk(s);
-    s.tmp_0.arg0 = "A button to swap objects";
+    s.tmp_0.arg0 = "B = yellow";
     s.tmp_0.arg1 = 12;
-    s.tmp_0.arg2 = 13;
+    s.tmp_0.arg2 = 5;
     s.callLocIdx = 85; s.pc = 52; return s.tmp_0;
   case 52:
     r0 = s.retval;
-    globals.textSprite___156658 = (r0);
-    s.tmp_0 = Sprite_setPosition__P138536_mk(s);
-    s.tmp_0.arg0 = globals.textSprite___156658;
-    s.tmp_0.arg1 = 80;
-    s.tmp_0.arg2 = 110;
+    globals.textSprite___158120 = (r0);
+    s.tmp_0 = textsprite_create__P140471_mk(s);
+    s.tmp_0.arg0 = "A = blue";
+    s.tmp_0.arg1 = 12;
+    s.tmp_0.arg2 = 9;
     s.callLocIdx = 86; s.pc = 53; return s.tmp_0;
   case 53:
+    r0 = s.retval;
+    globals.textSprite2___158123 = (r0);
+    s.tmp_0 = Sprite_setPosition__P138536_mk(s);
+    s.tmp_0.arg0 = globals.textSprite___158120;
+    s.tmp_0.arg1 = 50;
+    s.tmp_0.arg2 = 110;
+    s.callLocIdx = 87; s.pc = 54; return s.tmp_0;
+  case 54:
+    r0 = s.retval;
+    s.tmp_0 = Sprite_setPosition__P138536_mk(s);
+    s.tmp_0.arg0 = globals.textSprite2___158123;
+    s.tmp_0.arg1 = 110;
+    s.tmp_0.arg2 = 110;
+    s.callLocIdx = 88; s.pc = 55; return s.tmp_0;
+  case 55:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P156713.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P156713.continuations = [  ]
+_main___P158180.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-text/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P158180.continuations = [  ]
 
-function _main___P156713_mk(s) {
+function _main___P158180_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P156713, depth: s.depth + 1,
+        parent: s, fn: _main___P158180, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1640,7 +1655,7 @@ function myImages_inline__P143125_mk(s) {
 
 
 
-function inline__P156601(s) {
+function inline__P158063(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1650,19 +1665,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.yellow_speed___156603 = (100);
-    globals.blue_speed___156606 = (0);
+    globals.yellow_speed___158065 = (100);
+    globals.blue_speed___158068 = (0);
     s.tmp_0 = controller_moveSprite__P138294_mk(s);
-    s.tmp_0.arg0 = globals.blue___156610;
-    s.tmp_0.arg1 = globals.blue_speed___156606;
-    s.tmp_0.arg2 = globals.blue_speed___156606;
+    s.tmp_0.arg0 = globals.blue___158072;
+    s.tmp_0.arg1 = globals.blue_speed___158068;
+    s.tmp_0.arg2 = globals.blue_speed___158068;
     s.callLocIdx = 70; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P138294_mk(s);
-    s.tmp_0.arg0 = globals.yellow___156616;
-    s.tmp_0.arg1 = globals.yellow_speed___156603;
-    s.tmp_0.arg2 = globals.yellow_speed___156603;
+    s.tmp_0.arg0 = globals.yellow___158078;
+    s.tmp_0.arg1 = globals.yellow_speed___158065;
+    s.tmp_0.arg2 = globals.yellow_speed___158065;
     s.callLocIdx = 71; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -1670,12 +1685,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P156601.info = {"start":52,"length":175,"line":0,"column":52,"endLine":5,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P158063.info = {"start":52,"length":175,"line":0,"column":52,"endLine":5,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P156601_mk(s) {
+function inline__P158063_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P156601, depth: s.depth + 1,
+        parent: s, fn: inline__P158063, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1684,7 +1699,7 @@ function inline__P156601_mk(s) {
 
 
 
-function inline__P156623(s) {
+function inline__P158085(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1694,19 +1709,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.yellow_speed___156603 = (0);
-    globals.blue_speed___156606 = (100);
+    globals.yellow_speed___158065 = (0);
+    globals.blue_speed___158068 = (100);
     s.tmp_0 = controller_moveSprite__P138294_mk(s);
-    s.tmp_0.arg0 = globals.blue___156610;
-    s.tmp_0.arg1 = globals.blue_speed___156606;
-    s.tmp_0.arg2 = globals.blue_speed___156606;
+    s.tmp_0.arg0 = globals.blue___158072;
+    s.tmp_0.arg1 = globals.blue_speed___158068;
+    s.tmp_0.arg2 = globals.blue_speed___158068;
     s.callLocIdx = 73; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P138294_mk(s);
-    s.tmp_0.arg0 = globals.yellow___156616;
-    s.tmp_0.arg1 = globals.yellow_speed___156603;
-    s.tmp_0.arg2 = globals.yellow_speed___156603;
+    s.tmp_0.arg0 = globals.yellow___158078;
+    s.tmp_0.arg1 = globals.yellow_speed___158065;
+    s.tmp_0.arg2 = globals.yellow_speed___158065;
     s.callLocIdx = 74; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -1714,12 +1729,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P156623.info = {"start":281,"length":175,"line":6,"column":52,"endLine":11,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P158085.info = {"start":281,"length":175,"line":6,"column":52,"endLine":11,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P156623_mk(s) {
+function inline__P158085_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P156623, depth: s.depth + 1,
+        parent: s, fn: inline__P158085, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -44842,7 +44857,7 @@ const sprites_BaseSpriteSayRenderer__C138386_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["yellow_speed___156603","blue_speed___156606","blue___156610","yellow___156616","textSprite___156658"])
+const breakpoints = setupDebugger(1, ["yellow_speed___158065","blue_speed___158068","blue___158072","yellow___158078","textSprite___158120","textSprite2___158123"])
 
-return _main___P156713
+return _main___P158180
 })
